@@ -25,16 +25,28 @@ public class Baraja  extends NumeroAleatorio{
                Traje= (int)Math.floor(carta/13)+1;
             }else {
                Traje=(carta/13);
-            } 
+            }
         
-        System.out.println("Traje");
-            System.out.println(Traje);
+        System.out.println("******************************");
+            //System.out.println(Traje);
+        switch(Traje){
+        //Aqui imprimimos el nombre de el tipo de carta
+            case 1: System.out.println("La carta es el " +(carta-((Traje-1)*13)) +" de Treboles");
+                break;
+            case 2: System.out.println("La carta es el " +(carta-((Traje-1)*13)) +" de Diamantes");
+                break;
+            case 3: System.out.println("La carta es el " +(carta-((Traje-1)*13)) +" de Corazones");
+                break; 
+            case 4: System.out.println("La carta es el " +(carta-((Traje-1)*13)) +" de Espadas");
+                break;
+            default: System.out.println("Indefinido");
+                break;
+        }
         
-        System.out.println("Numero de las cartas");
-            System.out.println(carta-((Traje-1)*13));
+//        System.out.println("Numero de la carta");
+//            System.out.println(carta-((Traje-1)*13));
         
-        System.out.println("Secuencia completa de las cartas");
-            System.out.println(carta);
+        System.out.println("Secuencia en el mazo de cartas: "+(carta));
         }
     @Override 
     public void iniciar(){
